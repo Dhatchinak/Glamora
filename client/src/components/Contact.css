@@ -1,0 +1,63 @@
+.contact-section { background: var(--ink); }
+.contact-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;
+}
+@media (max-width: 768px) { .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; } }
+
+.map-placeholder {
+  aspect-ratio: 1/0.85;
+  border: 1px solid var(--border-soft); border-radius: 8px;
+  background: var(--graphite);
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  text-align: center; gap: 0.6rem;
+  font-size: 0.9rem; color: var(--parchment);
+  position: relative; overflow: hidden;
+  transition: border-color .3s;
+}
+.map-placeholder::before {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(135deg, rgba(201,168,76,0.04), transparent);
+}
+.map-placeholder:hover { border-color: var(--border); }
+.map-pin { font-size: 2.5rem; color: var(--gold); margin-bottom: 0.5rem; position: relative; z-index: 1; }
+.map-placeholder > * { position: relative; z-index: 1; }
+.map-sub  { font-size: 0.82rem; color: var(--mist); }
+.map-link {
+  margin-top: 0.5rem;
+  font-family: var(--cap); font-size: 9.5px; letter-spacing: 0.2em;
+  color: var(--gold); text-transform: uppercase;
+  transition: color .3s;
+}
+.map-link:hover { color: var(--gold-light); }
+
+.contact-info { display: flex; flex-direction: column; gap: 1.5rem; }
+.ci-row {
+  display: flex; gap: 1.3rem; align-items: flex-start;
+  padding: 1.3rem 1.5rem; border-radius: 6px;
+  border: 1px solid var(--border-soft);
+  transition: border-color .3s, background .3s;
+}
+.ci-row:hover { border-color: var(--border); background: rgba(201,168,76,0.03); }
+.ci-icon { font-size: 1.2rem; color: var(--gold); flex-shrink: 0; margin-top: 3px; }
+.ci-label { font-family: var(--cap); font-size: 8.5px; letter-spacing: 0.25em; color: var(--mist); text-transform: uppercase; margin-bottom: 4px; }
+.ci-val   { font-size: 0.9rem; color: var(--cream); }
+.ci-sub   { font-size: 0.8rem; color: var(--fog); margin-top: 2px; }
+
+.wa-btn {
+  display: flex; align-items: center; gap: 12px;
+  background: rgba(37,211,102,0.1); border: 1px solid rgba(37,211,102,0.25);
+  color: #25d366; border-radius: 6px; padding: 1rem 1.5rem;
+  font-family: var(--cap); font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase;
+  cursor: pointer; transition: all .3s;
+}
+.wa-btn:hover { background: rgba(37,211,102,0.18); border-color: rgba(37,211,102,0.5); transform: translateY(-2px); }
+.wa-dot {
+  width: 10px; height: 10px; border-radius: 50%;
+  background: #25d366; flex-shrink: 0;
+  animation: waPulse 2s ease-in-out infinite;
+}
+@keyframes waPulse {
+  0%,100%{box-shadow:0 0 0 0 rgba(37,211,102,0.4)}
+  50%{box-shadow:0 0 0 8px rgba(37,211,102,0)}
+}

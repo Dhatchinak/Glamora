@@ -1,0 +1,372 @@
+/* ═══════════════════════════════════════════════════════════
+   GLAMORA — SCREEN FIT OVERRIDES
+   Every section fills exactly 100vh — perfect for screenshots
+   and screen recordings. No partial content, no overflow.
+═══════════════════════════════════════════════════════════ */
+
+/* ── Global: ensure html/body fill viewport cleanly ─────── */
+html, body {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+/* ──────────────────────────────────────────────────────────
+   HERO — fits viewport exactly
+─────────────────────────────────────────────────────────── */
+.hero {
+  height: 100vh !important;
+  min-height: unset !important;
+  padding: 0 2.5rem !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  overflow: hidden !important;
+}
+
+.hero h1 {
+  font-size: clamp(2.8rem, 7.5vh, 6.5rem) !important;
+  margin-bottom: 1.4rem !important;
+}
+
+.hero-badge { margin-bottom: 1.8rem !important; }
+
+.hero-sub {
+  font-size: 13.5px !important;
+  margin-bottom: 2rem !important;
+  line-height: 1.75 !important;
+}
+
+.hero-btns { gap: 1rem !important; }
+
+.hero-stats {
+  margin-top: 3rem !important;
+  padding-top: 2rem !important;
+}
+
+.hero-stat .num {
+  font-size: clamp(1.8rem, 3.5vh, 2.6rem) !important;
+}
+
+.scroll-cue { bottom: 1.5rem !important; }
+
+/* Corner ornaments — scaled down */
+.hero-corner { width: 44px !important; height: 44px !important; }
+.hero-corner.tl,
+.hero-corner.tr { top: 4rem !important; }
+
+/* ──────────────────────────────────────────────────────────
+   ALL SECTIONS — 100vh snap-scroll fit
+─────────────────────────────────────────────────────────── */
+.section {
+  height: 100vh !important;
+  min-height: unset !important;
+  padding: 0 2.5rem !important;
+  display: flex !important;
+  align-items: center !important;
+  overflow: hidden !important;
+  box-sizing: border-box !important;
+}
+
+.section .container {
+  width: 100% !important;
+  max-width: 1140px !important;
+  margin: 0 auto !important;
+}
+
+/* Section header spacing */
+.section-header {
+  margin-bottom: 2.5rem !important;
+}
+.section-title {
+  font-size: clamp(1.9rem, 3.5vh, 3.2rem) !important;
+  margin-bottom: 1rem !important;
+}
+.section-sub {
+  font-size: 13px !important;
+  line-height: 1.75 !important;
+}
+.divider { margin: 1rem 0 !important; }
+
+/* ──────────────────────────────────────────────────────────
+   AI STYLE SECTION
+─────────────────────────────────────────────────────────── */
+.ai-section.section {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.ai-form-card,
+.ai-result-card {
+  padding: 2.2rem 2.8rem !important;
+}
+
+.ai-form-card h3 {
+  font-size: 1.2rem !important;
+  margin-bottom: 1.5rem !important;
+}
+
+.form-group {
+  margin-bottom: 1.2rem !important;
+}
+
+/* ──────────────────────────────────────────────────────────
+   PACKAGES SECTION
+─────────────────────────────────────────────────────────── */
+.packages-section.section {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.pkg-card {
+  padding: 2rem 2rem !important;
+}
+
+.pkg-name {
+  font-size: 1.25rem !important;
+  margin-bottom: 0.3rem !important;
+}
+
+.pkg-desc {
+  font-size: 12px !important;
+  margin-bottom: 1.2rem !important;
+}
+
+.pkg-list {
+  margin-bottom: 1.2rem !important;
+}
+
+.pkg-list li {
+  padding: 5px 0 !important;
+  font-size: 12px !important;
+}
+
+.pkg-icon {
+  font-size: 1rem !important;
+  margin-bottom: 1.2rem !important;
+}
+
+/* ──────────────────────────────────────────────────────────
+   GALLERY SECTION
+─────────────────────────────────────────────────────────── */
+.gallery-section.section {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.gallery-tabs {
+  margin-bottom: 2rem !important;
+}
+
+.gallery-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 1px !important;
+}
+
+.ba-card {
+  /* Scale down to fit inside viewport height */
+}
+
+.ba-split {
+  height: clamp(120px, 18vh, 200px) !important;
+}
+
+.ba-img {
+  height: 100% !important;
+}
+
+.ba-meta {
+  padding: 10px 14px !important;
+}
+
+.ba-title {
+  font-size: 13px !important;
+}
+
+.ba-tag {
+  font-size: 10px !important;
+}
+
+/* ──────────────────────────────────────────────────────────
+   LOYALTY / OFFERS SECTION
+─────────────────────────────────────────────────────────── */
+.loyalty-section.section {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.first-timer {
+  padding: 1.8rem !important;
+  margin-bottom: 1rem !important;
+}
+
+.disc {
+  font-size: 3rem !important;
+}
+
+/* ──────────────────────────────────────────────────────────
+   CONTACT SECTION
+─────────────────────────────────────────────────────────── */
+.contact-section.section {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.contact-grid {
+  gap: 3rem !important;
+}
+
+.map-placeholder {
+  min-height: 260px !important;
+}
+
+.ci-row {
+  padding: 1.2rem 0 !important;
+}
+
+/* ──────────────────────────────────────────────────────────
+   BOOKING PAGE — 100vh fit
+─────────────────────────────────────────────────────────── */
+.booking-page {
+  min-height: 100vh !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.booking-page .section {
+  flex: 1 !important;
+  height: auto !important;
+  padding: 0 !important;
+}
+
+.booking-page .container {
+  padding: 0 !important;
+  max-width: 100% !important;
+}
+
+.booking-grid {
+  height: calc(100vh - 64px) !important;
+  overflow: hidden !important;
+}
+
+.booking-panel {
+  padding: 2rem 2.2rem !important;
+  overflow-y: auto !important;
+  height: 100% !important;
+  scrollbar-width: thin !important;
+  scrollbar-color: var(--gold-dim) transparent !important;
+}
+
+.booking-panel h3 {
+  font-size: 0.95rem !important;
+  margin-bottom: 1.4rem !important;
+  padding-bottom: 0.8rem !important;
+}
+
+/* ──────────────────────────────────────────────────────────
+   AUTH PAGES (Login / Register) — 100vh centred
+─────────────────────────────────────────────────────────── */
+.auth-page {
+  height: 100vh !important;
+  min-height: unset !important;
+  padding: 0 2rem !important;
+}
+
+.auth-card {
+  padding: 2.5rem !important;
+}
+
+/* ──────────────────────────────────────────────────────────
+   MY BOOKINGS PAGE — 100vh
+─────────────────────────────────────────────────────────── */
+.my-bookings {
+  min-height: 100vh !important;
+  padding-bottom: 2rem !important;
+}
+
+.my-bookings .section {
+  height: auto !important;
+  min-height: unset !important;
+  padding: 2rem 2.5rem !important;
+  display: block !important;
+}
+
+/* ──────────────────────────────────────────────────────────
+   ADMIN PAGE — 100vh
+─────────────────────────────────────────────────────────── */
+.admin-page {
+  min-height: 100vh !important;
+}
+
+.admin-page .section {
+  height: auto !important;
+  min-height: unset !important;
+  padding: 2rem 2.5rem !important;
+  display: block !important;
+}
+
+/* ──────────────────────────────────────────────────────────
+   FOOTER — compact, snug
+─────────────────────────────────────────────────────────── */
+.footer {
+  padding: 3.5rem 2.5rem 2rem !important;
+}
+
+.footer-links {
+  margin-bottom: 2rem !important;
+}
+
+/* ──────────────────────────────────────────────────────────
+   SNAP SCROLL — silky section-to-section scrolling
+─────────────────────────────────────────────────────────── */
+body > #root > * {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+.page-fade > div > .hero,
+.page-fade > div > .section,
+.page-fade > div > .footer {
+  scroll-snap-align: start;
+}
+
+/* ──────────────────────────────────────────────────────────
+   RESPONSIVE FINE-TUNING (1366×768 & 1920×1080)
+─────────────────────────────────────────────────────────── */
+@media (max-height: 800px) {
+  .hero h1 { font-size: clamp(2.4rem, 6.5vh, 5rem) !important; }
+  .hero-badge { margin-bottom: 1.2rem !important; padding: 7px 20px !important; }
+  .hero-sub   { margin-bottom: 1.5rem !important; }
+  .hero-stats { margin-top: 2rem !important; padding-top: 1.5rem !important; }
+  .section-title { font-size: clamp(1.6rem, 3vh, 2.6rem) !important; }
+  .pkg-card { padding: 1.5rem 1.8rem !important; }
+  .pkg-list li { padding: 3px 0 !important; }
+  .ba-split { height: clamp(100px, 16vh, 160px) !important; }
+  .ai-form-card, .ai-result-card { padding: 1.8rem 2rem !important; }
+}
+
+@media (max-height: 680px) {
+  .hero h1 { font-size: 2.4rem !important; }
+  .hero-sub { font-size: 12.5px !important; line-height: 1.6 !important; }
+  .hero-stats { margin-top: 1.5rem !important; padding-top: 1.2rem !important; }
+  .hero-stat .num { font-size: 1.6rem !important; }
+}
+
+@media (max-width: 768px) {
+  .section {
+    height: auto !important;
+    min-height: 100vh !important;
+    padding: 5.5rem 1.25rem 3rem !important;
+    display: block !important;
+  }
+  .hero {
+    height: 100vh !important;
+    padding: 6rem 1.25rem 3rem !important;
+  }
+  .booking-grid {
+    height: auto !important;
+    overflow: visible !important;
+  }
+  .booking-panel { height: auto !important; overflow: visible !important; }
+}

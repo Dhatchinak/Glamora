@@ -1,0 +1,134 @@
+{
+  "users": [
+    {
+      "_id": "000000000000019db9a0b687",
+      "createdAt": "2026-04-23T09:16:50.815Z",
+      "name": "Glamora Admin",
+      "email": "admin@glamora.in",
+      "password": "$2a$10$rbgluXXkcfxVpEMlJoBdoe0jw.f87P/ApWWpj4WXE.whyA3oQgrai",
+      "role": "admin",
+      "loyaltyPoints": 0,
+      "isFirstVisit": false
+    },
+    {
+      "_id": "000000000000019db9a0b688",
+      "createdAt": "2026-04-23T09:16:50.900Z",
+      "name": "Priya Sharma",
+      "email": "priya@email.com",
+      "password": "$2a$10$TivBHqVJYRKFTElbxRPlM.5rmz02QeNcUrCerHFRImaf8S9z.3wSm",
+      "role": "user",
+      "loyaltyPoints": 240,
+      "isFirstVisit": false
+    },
+    {
+      "_id": "000000000000019dcd795f63",
+      "createdAt": "2026-04-27T05:48:33.420Z",
+      "name": "ss",
+      "email": "dhatchinak05@gmail.com",
+      "password": "$2a$10$Ek1BkU8rIS6KK9HvUKUESOkNjTCwMQ3UQYvxGusSFb2vbRhDT.RdS",
+      "role": "user",
+      "loyaltyPoints": 180,
+      "isFirstVisit": true
+    }
+  ],
+  "bookings": [
+    {
+      "_id": "000000000000019dcd7b76b0",
+      "createdAt": "2026-04-27T05:51:58.739Z",
+      "userName": "Dhatchina",
+      "userEmail": "dhatchinak05@gmail.com",
+      "stylist": "Priya Rangan",
+      "service": "Hair Cut & Style",
+      "date": "2026-04-25",
+      "timeSlot": "11:30",
+      "basePrice": 500,
+      "stylistFee": 900,
+      "isWeekend": true,
+      "isRush": true,
+      "totalPrice": 1880,
+      "user": "000000000000019dcd795f63"
+    }
+  ],
+  "services": [
+    {
+      "_id": "000000000000019db9a0b689",
+      "createdAt": "2026-04-23T09:16:50.901Z",
+      "name": "Hair Cut & Style",
+      "category": "Hair",
+      "price": 500,
+      "duration": "1 hour",
+      "description": "Precision cut with professional blowout",
+      "isActive": true
+    },
+    {
+      "_id": "000000000000019db9a0b68a",
+      "createdAt": "2026-04-23T09:16:50.901Z",
+      "name": "Bridal Makeup",
+      "category": "Makeup",
+      "price": 800,
+      "duration": "2.5 hours",
+      "description": "Full HD bridal makeup with lashes",
+      "isActive": true
+    },
+    {
+      "_id": "000000000000019db9a0b68b",
+      "createdAt": "2026-04-23T09:16:50.901Z",
+      "name": "Facial & Glow",
+      "category": "Skin",
+      "price": 600,
+      "duration": "1.5 hours",
+      "description": "Deep cleanse + glow treatment",
+      "isActive": true
+    },
+    {
+      "_id": "000000000000019db9a0b68c",
+      "createdAt": "2026-04-23T09:16:50.901Z",
+      "name": "Nail Art",
+      "category": "Nails",
+      "price": 300,
+      "duration": "45 mins",
+      "description": "Custom nail art design",
+      "isActive": true
+    },
+    {
+      "_id": "000000000000019db9a0b68d",
+      "createdAt": "2026-04-23T09:16:50.901Z",
+      "name": "Hair Color",
+      "category": "Hair",
+      "price": 1200,
+      "duration": "3 hours",
+      "description": "Global color or highlights",
+      "isActive": true
+    },
+    {
+      "_id": "000000000000019db9a0b68e",
+      "createdAt": "2026-04-23T09:16:50.901Z",
+      "name": "Keratin Treatment",
+      "category": "Hair",
+      "price": 1500,
+      "duration": "3.5 hours",
+      "description": "Smoothing & frizz control",
+      "isActive": true
+    },
+    {
+      "_id": "000000000000019db9a0b68f",
+      "createdAt": "2026-04-23T09:16:50.901Z",
+      "name": "Party Makeup",
+      "category": "Makeup",
+      "price": 600,
+      "duration": "1.5 hours",
+      "description": "Glamorous event makeup",
+      "isActive": true
+    },
+    {
+      "_id": "000000000000019db9a0b690",
+      "createdAt": "2026-04-23T09:16:50.901Z",
+      "name": "Skin Brightening Facial",
+      "category": "Skin",
+      "price": 800,
+      "duration": "2 hours",
+      "description": "Vitamin C & brightening actives",
+      "isActive": true
+    }
+  ]
+}

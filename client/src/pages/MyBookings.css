@@ -1,0 +1,44 @@
+.my-bookings { padding-top: calc(var(--nav-h) + 2rem); background: var(--ink); }
+
+.user-summary {
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 1.5rem;
+  border: 1px solid var(--border-soft); border-radius: 8px;
+  padding: 2rem 2.5rem; margin-bottom: 3rem;
+  background: linear-gradient(135deg, rgba(24,21,16,0.9), rgba(14,12,8,0.95));
+}
+.us-info { display: flex; align-items: center; gap: 1.3rem; }
+.us-avatar {
+  width: 52px; height: 52px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--gold-dim), var(--slate));
+  border: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--serif); font-size: 1.3rem; color: var(--gold-light);
+  flex-shrink: 0;
+}
+.us-name  { font-family: var(--serif); font-size: 1.25rem; color: var(--ivory); }
+.us-email { font-size: 0.82rem; color: var(--mist); margin-top: 2px; }
+.us-points { text-align: right; }
+.us-pts-val { font-family: var(--serif); font-size: 2.5rem; color: var(--gold-light); line-height: 1; }
+.us-pts-lbl { font-family: var(--cap); font-size: 8.5px; letter-spacing: 0.25em; color: var(--mist); text-transform: uppercase; margin-top: 4px; }
+
+.bookings-list { display: flex; flex-direction: column; gap: 1.2rem; }
+.booking-card {
+  border: 1px solid var(--border-soft); border-radius: 8px;
+  padding: 1.8rem 2rem;
+  background: rgba(14,12,8,0.6);
+  display: grid; grid-template-columns: 1fr auto;
+  gap: 1rem; align-items: start;
+  transition: border-color .3s, background .3s;
+}
+.booking-card:hover { border-color: var(--border); background: rgba(14,12,8,0.9); }
+.bc-row { display: flex; flex-wrap: wrap; gap: 1.5rem; margin-bottom: 0.6rem; }
+.bc-item label { font-family: var(--cap); font-size: 7.5px; letter-spacing: 0.3em; color: var(--mist); text-transform: uppercase; display: block; margin-bottom: 3px; }
+.bc-item p     { font-size: 0.88rem; color: var(--cream); }
+.bc-price { font-family: var(--serif); font-size: 1.8rem; color: var(--gold-light); text-align: right; }
+.bc-date  { font-family: var(--cap); font-size: 8.5px; letter-spacing: 0.2em; color: var(--fog); text-transform: uppercase; text-align: right; margin-top: 4px; }
+
+@media (max-width: 600px) {
+  .booking-card { grid-template-columns: 1fr; }
+  .us-points { display: none; }
+}

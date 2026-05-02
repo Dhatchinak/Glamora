@@ -1,0 +1,91 @@
+/* ── Loyalty Tiers — equal-size cards ── */
+.loyalty-tiers {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+  justify-items: stretch;
+  margin-bottom: 3.5rem;
+}
+@media (max-width: 1100px) { .loyalty-tiers { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width:  700px) { .loyalty-tiers { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width:  480px) { .loyalty-tiers { grid-template-columns: 1fr; } }
+
+.tier-card {
+  position: relative;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 12px;
+  padding: 2.2rem 1.4rem 2rem;
+  text-align: center;
+  background: var(--gold-trace);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Equal height — all cards stretch to same row height */
+  height: 100%;
+  box-sizing: border-box;
+  transition: transform 0.35s var(--ease-spring), box-shadow 0.35s, border-color 0.3s;
+  overflow: hidden;
+}
+
+.tier-card::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: var(--tier-color, var(--gold));
+  border-radius: 12px 12px 0 0;
+}
+
+.tier-featured {
+  border-color: rgba(201,168,76,0.35);
+  background: linear-gradient(160deg, rgba(201,168,76,0.11), rgba(201,168,76,0.03));
+}
+
+.tier-popular-badge {
+  position: absolute; top: 0.65rem; right: 0.65rem;
+  font-family: var(--cap); font-size: 6.5px; letter-spacing: 0.2em;
+  text-transform: uppercase; color: var(--ink);
+  background: var(--gold); padding: 0.22rem 0.55rem; border-radius: 2px;
+}
+
+.tier-icon  { font-size: 2rem; margin-bottom: 0.85rem; display: block; flex-shrink: 0; }
+.tier-name  { font-family: var(--serif); font-size: 1.25rem; margin-bottom: 0.3rem; flex-shrink: 0; }
+.tier-pts   {
+  font-family: var(--cap); font-size: 7.5px; letter-spacing: 0.2em;
+  color: var(--fog); text-transform: uppercase; margin-bottom: 1rem; flex-shrink: 0;
+}
+.tier-divider { width: 34px; height: 1px; margin: 0 auto 1.1rem; opacity: 0.45; flex-shrink: 0; }
+
+.tier-perks {
+  list-style: none; text-align: left; margin-bottom: 1.5rem;
+  width: 100%; flex: 1;           /* ← grows to fill, so cta stays at bottom */
+}
+.tier-perks li {
+  display: flex; gap: 0.5rem; align-items: flex-start;
+  font-size: 0.78rem; color: var(--parchment);
+  padding: 0.32rem 0; border-bottom: 1px solid var(--border-soft); line-height: 1.45;
+}
+.tier-perks li:last-child { border-bottom: none; }
+.tier-perks li span { flex-shrink: 0; margin-top: 0.05rem; }
+
+.tier-cta {
+  width: 100%; flex-shrink: 0;
+  background: transparent; border: 1px solid;
+  border-radius: var(--r); padding: 0.6rem;
+  font-family: var(--cap); font-size: 8px; letter-spacing: 0.2em;
+  text-transform: uppercase; cursor: pointer; transition: background 0.25s, color 0.25s;
+  margin-top: auto;
+}
+.tier-cta:hover { background: var(--tier-color, var(--gold)); color: var(--ink) !important; }
+
+/* Loyalty user card */
+.loyalty-user-card {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 2rem; flex-wrap: wrap; max-width: 580px; margin: 0 auto;
+  background: var(--gold-glow); border: 1px solid var(--gold-border);
+  border-radius: 12px; padding: 2rem 2.5rem;
+}
+.loyalty-user-label { font-family: var(--cap); font-size: 8px; letter-spacing: 0.3em; color: var(--mist); text-transform: uppercase; margin-bottom: 0.35rem; }
+.loyalty-user-pts   { font-family: var(--serif); font-size: 3rem; color: var(--gold-light); line-height: 1; }
+.loyalty-user-sub   { font-size: 0.78rem; color: var(--fog); margin-top: 0.3rem; }
+@media (max-width: 600px) {
+  .loyalty-user-card { flex-direction: column; text-align: center; }
+}
