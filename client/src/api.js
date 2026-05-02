@@ -1,6 +1,11 @@
 import axios from 'axios';
 
-const api = axios.create({ baseURL: '/api' });
+const BASE = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+
+const api = axios.create({
+  baseURL: `${BASE}/api`,
+  headers: { 'Content-Type': 'application/json' },
+});
 
 api.interceptors.request.use(cfg => {
   const token = localStorage.getItem('glamora_token');
@@ -12,7 +17,6 @@ api.interceptors.response.use(
   res => res,
   err => {
     if (err.response?.status === 401) {
-      // Token expired - clear and redirect
       localStorage.removeItem('glamora_token');
       localStorage.removeItem('glamora_user');
       if (window.location.pathname !== '/login') {
