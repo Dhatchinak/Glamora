@@ -46,7 +46,7 @@ function useLenisScroll() {
   }, []);
 }
 
-
+function Cursor() {
   const dot  = useRef(null);
   const ring = useRef(null);
   useEffect(() => {
