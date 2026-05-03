@@ -1,11 +1,12 @@
-/* ── Gallery grid — 4 col, portrait cards ── */
+/* ── Gallery grid ── */
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 10px;
 }
 @media (max-width: 1000px) { .gallery-grid { grid-template-columns: repeat(3, 1fr); } }
-@media (max-width:  680px) { .gallery-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 680px)  { .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; } }
+@media (max-width: 400px)  { .gallery-grid { grid-template-columns: 1fr; gap: 8px; } }
 
 /* ── Each card ── */
 .gallery-item {
@@ -168,4 +169,14 @@
   .lightbox-next { right: 0.5rem; }
   .lightbox-img-wrap img { max-height: 55vh; }
   .lightbox-info { padding: 1rem 1.2rem; flex-direction: column; align-items: flex-start; }
+
+  /* On mobile: always show overlay text, no hover needed */
+  .gallery-overlay { opacity: 1; }
+  .gallery-overlay-inner { opacity: 1 !important; transform: none !important; }
+  .gallery-item:hover { transform: none; box-shadow: 0 4px 24px rgba(0,0,0,0.35); }
+
+  /* Slightly smaller cards on mobile */
+  .gallery-overlay-title { font-size: 0.9rem; }
+  .gallery-filter { padding: 0.45rem 0.9rem; font-size: 8px; letter-spacing: 0.18em; }
+  .gallery-filters { gap: 0.4rem; margin-bottom: 2rem; }
 }
