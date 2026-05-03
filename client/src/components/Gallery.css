@@ -161,3 +161,11 @@
 .lightbox-nav:hover { background: var(--gold-glow); border-color: var(--gold); }
 .lightbox-prev { left: 1rem; }
 .lightbox-next { right: 1rem; }
+
+@media (max-width: 768px) {
+  .lightbox-nav { width: 36px; height: 36px; font-size: 0.9rem; }
+  .lightbox-prev { left: 0.5rem; }
+  .lightbox-next { right: 0.5rem; }
+  .lightbox-img-wrap img { max-height: 55vh; }
+  .lightbox-info { padding: 1rem 1.2rem; flex-direction: column; align-items: flex-start; }
+}

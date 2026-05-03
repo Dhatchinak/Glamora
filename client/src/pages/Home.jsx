@@ -22,7 +22,15 @@ export default function Home() {
   const heroY   = useTransform(scrollYProgress, [0, 1], ['0%', '22%']);
   const heroOp  = useTransform(scrollYProgress, [0, 0.7], [1, 0]);
 
-  const scrollTo = (id) => document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+  const scrollTo = (id) => {
+    const el = document.getElementById(id);
+    if (!el) return;
+    if (window.__lenis) {
+      window.__lenis.scrollTo(el, { offset: -80, duration: 1.4 });
+    } else {
+      el.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   return (
     <div>

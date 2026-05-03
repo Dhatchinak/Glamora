@@ -22,11 +22,17 @@ export default function Navbar() {
 
   const scrollTo = id => {
     setMenuOpen(false);
+    const doScroll = () => {
+      const el = document.getElementById(id);
+      if (!el) return;
+      if (window.__lenis) window.__lenis.scrollTo(el, { offset: -80, duration: 1.4 });
+      else el.scrollIntoView({ behavior: 'smooth' });
+    };
     if (location.pathname !== '/') {
       navigate('/');
-      setTimeout(() => document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' }), 420);
+      setTimeout(doScroll, 420);
     } else {
-      document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+      doScroll();
     }
   };
 
