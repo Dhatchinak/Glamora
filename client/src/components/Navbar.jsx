@@ -24,16 +24,10 @@ export default function Navbar() {
     setMenuOpen(false);
     const doScroll = () => {
       const el = document.getElementById(id);
-      if (!el) return;
-      if (window.__lenis) window.__lenis.scrollTo(el, { offset: -80, duration: 1.4 });
-      else el.scrollIntoView({ behavior: 'smooth' });
+      window.__smoothScrollTo?.(el, -80) ?? el?.scrollIntoView({ behavior: 'smooth' });
     };
-    if (location.pathname !== '/') {
-      navigate('/');
-      setTimeout(doScroll, 420);
-    } else {
-      doScroll();
-    }
+    if (location.pathname !== '/') { navigate('/'); setTimeout(doScroll, 420); }
+    else doScroll();
   };
 
   const NAV = [

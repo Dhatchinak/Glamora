@@ -1,0 +1,3 @@
+/* screen-fit.css — RESET: all harmful overrides removed */
+/* scroll-snap, height:100vh !important, overflow:hidden !important removed */
+/* These were breaking scroll on mobile and desktop */
