@@ -305,23 +305,8 @@
 }
 
 @media (max-width: 768px) {
-  .content {
-    max-width: 100%;
-    padding-top: 80px;
-    padding-bottom: 60px;
-  }
-  .statsRow {
-    gap: 24px;
-    flex-wrap: wrap;
-  }
+  .content { max-width: 100%; }
+  .statsRow { gap: 30px; flex-wrap: wrap; }
   .scroll { left: 24px; }
-  .ctaRow {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 12px;
-  }
-  .h1 { font-size: clamp(52px, 12vw, 90px); }
-  .hLine2 { font-size: clamp(44px, 11vw, 80px); }
-  .sub { font-size: 16px; margin-bottom: 36px; }
-  .tagLine { margin-bottom: 20px; }
+  .ctaRow { flex-direction: column; align-items: flex-start; }
 }

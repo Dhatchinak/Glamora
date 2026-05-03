@@ -89,11 +89,3 @@
 @media (max-width: 600px) {
   .loyalty-user-card { flex-direction: column; text-align: center; }
 }
-
-@media (max-width: 768px) {
-  .loyalty-tiers { grid-template-columns: repeat(2, 1fr); gap: 0.9rem; }
-  .tier-card { padding: 1.5rem 1rem; }
-}
-@media (max-width: 480px) {
-  .loyalty-tiers { grid-template-columns: 1fr; }
-}

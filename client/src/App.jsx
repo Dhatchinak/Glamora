@@ -1,7 +1,6 @@
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { useEffect, useRef } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
-import Lenis from '@studio-freight/lenis';
 import { AuthProvider } from './context/AuthContext';
 import PageLoader       from './components/PageLoader';
 import FloatingParticles from './components/FloatingParticles';
@@ -14,37 +13,6 @@ import Login        from './pages/Login';
 import Register     from './pages/Register';
 import MyBookings   from './pages/MyBookings';
 import Admin        from './pages/Admin';
-
-function useLenisScroll() {
-  useEffect(() => {
-    const lenis = new Lenis({
-      duration: 1.25,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      direction: 'vertical',
-      smooth: true,
-      smoothTouch: false,
-      touchMultiplier: 1.5,
-    });
-
-    // Integrate with framer-motion scroll
-    lenis.on('scroll', () => {});
-
-    function raf(time) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-    const id = requestAnimationFrame(raf);
-
-    // Expose lenis globally for scrollTo calls
-    window.__lenis = lenis;
-
-    return () => {
-      cancelAnimationFrame(id);
-      lenis.destroy();
-      window.__lenis = null;
-    };
-  }, []);
-}
 
 function Cursor() {
   const dot  = useRef(null);
@@ -87,7 +55,6 @@ function useScrollReveal() {
 function AppInner() {
   const location = useLocation();
   useScrollReveal();
-  useLenisScroll();
   useEffect(() => { window.scrollTo(0, 0); }, [location.pathname]);
 
   // Gold top bar on navigation
