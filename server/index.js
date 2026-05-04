@@ -5,14 +5,7 @@ const dotenv  = require('dotenv');
 dotenv.config();
 
 const app = express();
-app.use(cors({
-  origin: [
-    'http://localhost:5173',
-    'https://glamora.vercel.app',        // ← your Vercel URL
-    /\.vercel\.app$/,                     // ← allows all vercel preview URLs
-  ],
-  credentials: true,
-}));
+app.use(cors());
 app.use(express.json());
 
 app.use('/api/auth',     require('./routes/auth'));
