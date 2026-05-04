@@ -18,7 +18,7 @@ export default function Contact() {
   };
 
   return (
-    <section className="section" id="contact" style={{ background: 'var(--charcoal)' }}>
+    <section className="section section-alt" id="contact">
       <div className="container">
         <div className="section-header">
           <motion.span className="section-label" initial={{opacity:0,y:20}} whileInView={{opacity:1,y:0}} viewport={{once:true}}>

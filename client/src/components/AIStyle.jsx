@@ -45,7 +45,7 @@ export default function AIStyle() {
   const canGenerate = Object.values(sel).some(Boolean);
 
   return (
-    <section className="section" id="ai" style={{ background: 'var(--charcoal)' }}>
+    <section className="section section-alt" id="ai">
       <div className="container">
         <div className="section-header">
           <motion.span className="section-label"
